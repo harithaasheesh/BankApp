@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h2>Transaction History</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl.No</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transaction of transactions; let i=index">
+                        <th>{{i+1}}</th>
+                        <th>{{transaction.amount}}</th>
+                        <th>{{transaction.type}}</th>
+                    </tr>
+                </tbody>
+            </table>
+            <a routerLink="/dashboard">Home</a>
+
+        </div>
+        <div class="col-4"></div>
+       
+
+    </div>
+    
+    
+
+</div>

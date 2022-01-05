@@ -1,0 +1,28 @@
+{{aim}}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5">
+           <form [formGroup]="loginForm" (ngSubmit)="login()">
+                 <div>
+                    <input type=" text"   formControlName="acno"  placeholder="enter account number" class="form-control" id="bk_acntno"> 
+                 </div>
+                 <div *ngIf="(this.loginForm.get('acno')?.touched||this.loginForm.get('acno')?.dirty)&&this.loginForm.get('acno')?.errors">Invalid Accountnumber</div>
+                 <div>
+                    <input type=" text"  placeholder="enter password" formControlName="pswd"  class="form-control mt-1" id="bk_paswd"> 
+                 </div>
+                 <div *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&&this.loginForm.get('pswd')?.errors">Invalid Password</div>
+                
+               
+                <div class="d-grid gap-2 mt-3">
+                <input type="submit" value="Login" class="btn btn-primary">
+                <!-- <button type="button" (click)="login()" class="btn btn-primary">Login</button> -->
+            </div>
+            <a href="" routerLink="register">Not a user ? Register</a>
+        </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
